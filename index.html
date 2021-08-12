@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acrescimo Salarial</title>
+</head>
+
+<body>
+    <form method="POST" action="./calc.php">
+        <h1>Calcule seu acréscimo</h1>
+
+        <div class="containerPergunta">
+            <label for="nome">Nome completo:</label>
+            <input id="nome" name="nome" required/>
+        </div>
+        <div class="containerPergunta">
+            <label for="salario-antigo">Salário:</label>
+            <input type="number" id="salario-antigo" name="salario-antigo" required/>
+        </div>
+        <div class="containerPergunta">
+            <h2>Gênero</h2>
+            <label for="masculino">Masculino:</label>
+            <input type="radio" id="masculino" name="genero-sexual" value="masculino" required/>
+            <label for="feminino">Feminino:</label>
+            <input type="radio" id="feminino" name="genero-sexual" value="feminino" required/>
+            <label for="outro">Outro:</label>
+            <input type="radio" id="outro" name="genero-sexual" value="outro" required/>
+        </div>
+        <div class="containerPergunta">
+
+            <input name="cargo" list="cargo">
+            <datalist id="cargo">
+                <option value="Investidor Especializado"></option>
+                <option value="Desenvolvedor de áreas comerciais"></option>
+                <option value="Investidor Especializado"></option>
+                <option value="Comunicadora das áreas transversais"></option>
+                <option value="Gerente Especializado em telecomunicação"></option>
+            </datalist>
+
+            <button>
+                Calcular
+            </button>
+
+    </form>
+
+</body>
+
+</html>
