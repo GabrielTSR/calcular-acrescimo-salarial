@@ -5,32 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Acrescimo Salarial</title>
 </head>
 
 <body>
-    <form method="POST" action="./calc.php">
+    <form method="POST" action="./calculo.php">
         <h1>Calcule seu acréscimo</h1>
 
         <div class="containerPergunta">
-            <label for="nome">Nome completo:</label>
+            <label for="nome">&nbsp;&nbsp;&nbsp;&nbsp;Nome completo:</label>
             <input id="nome" name="nome" required/>
         </div>
         <div class="containerPergunta">
-            <label for="salario-antigo">Salário:</label>
+            <label for="salario-antigo">&nbsp;&nbsp;&nbsp;&nbsp;Salário (R$):</label>
             <input type="number" id="salario-antigo" name="salario-antigo" required/>
         </div>
-        <div class="containerPergunta">
-            <h2>Gênero</h2>
-            <label for="masculino">Masculino:</label>
-            <input type="radio" id="masculino" name="genero-sexual" value="masculino" required/>
-            <label for="feminino">Feminino:</label>
-            <input type="radio" id="feminino" name="genero-sexual" value="feminino" required/>
-            <label for="outro">Outro:</label>
-            <input type="radio" id="outro" name="genero-sexual" value="outro" required/>
-        </div>
-        <div class="containerPergunta">
+        <div class="containerRadio">
 
+            <table>
+                <thead>
+                    <tr>
+                        <th><label>Gênero:</label></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label for="masculino">Masculino:</label></td>
+                        <td><input type="radio" id="masculino" name="genero-sexual" value="masculino" required/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="feminino">Feminino:</label></td>
+                        <td><input type="radio" id="feminino" name="genero-sexual" value="feminino" required/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="outro">Outro:</label></td>
+                        <td><input type="radio" id="outro" name="genero-sexual" value="outro" required/></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="cargosList">
+            <label for="cargo">&nbsp;&nbsp;&nbsp;&nbsp;Cargo:</label>
             <input name="cargo" list="cargo">
             <datalist id="cargo">
                 <option value="Investidor Especializado"></option>
@@ -39,10 +57,13 @@
                 <option value="Comunicadora das áreas transversais"></option>
                 <option value="Gerente Especializado em telecomunicação"></option>
             </datalist>
+        </div>
 
+        <div class="button-container">
             <button>
                 Calcular
             </button>
+        </div>
 
     </form>
 

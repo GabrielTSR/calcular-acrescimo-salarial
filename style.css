@@ -3,4 +3,130 @@
     border: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(rgb(12, 223, 12), rgb(211, 211, 15));
+}
+
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    width: 70%;
+    height: 600px;
+    border-radius: 5px;
+    gap: 35px;
+    box-shadow: 5px 30px 50px;
+}
+
+form>* {
+    width: 100%;
+}
+
+h1 {
+    justify-self: flex-end;
+    text-align: center;
+    font-size: 2rem;
+}
+
+th {
+    font-weight: 500;
+}
+
+label {
+    font-weight: 500;
+}
+
+table {
+    border-spacing: 10px;
+}
+
+.containerPergunta {
+    width: 100%;
+    height: 60px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: flex-end;
+    height: 40px;
+}
+
+button {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(197, 255, 197);
+    border: 2px black solid;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    border: none;
+    background-color: rgb(12, 223, 12);
+    transition: all 400ms;
+}
+
+input {
+    border: 2px black solid;
+    padding: 10px;
+}
+
+.containerRadio {
+    gap: 15px;
+}
+
+.cargosList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+#error-message {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 5px 30px 50px;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+#circle-container>* {
+    width: 100%;
+    text-align: center;
+}
+
+.novoSalario {
+    font-size: 1.2rem;
+    color: green;
 }
