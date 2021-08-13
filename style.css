@@ -22,11 +22,11 @@ form {
     flex-direction: column;
     justify-content: space-around;
     background-color: white;
-    width: 70%;
-    height: 600px;
-    border-radius: 5px;
+    width: 400px;
+    max-height: 90vh;
+    border-radius: 10px;
     gap: 35px;
-    box-shadow: 5px 30px 50px;
+    box-shadow: 30px 30px 1000px;
 }
 
 form>* {
@@ -57,6 +57,10 @@ table {
     gap: 15px;
     display: flex;
     flex-direction: column;
+}
+
+#cargo {
+    color: black;
 }
 
 .button-container {
@@ -113,10 +117,10 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    height: 80%;
+    width: 600px;
+    height: 600px;
     background-color: white;
-    box-shadow: 5px 30px 50px;
+    box-shadow: 30px 30px 1000px;
     border-radius: 100%;
     padding: 10px;
 }
@@ -126,7 +130,16 @@ input {
     text-align: center;
 }
 
+#circle-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+#circle-container p {
+    font-size: 2rem;
+}
+
 .novoSalario {
-    font-size: 1.2rem;
+    font-size: 2.7rem;
     color: green;
 }
