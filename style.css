@@ -43,6 +43,13 @@ th {
     font-weight: 500;
 }
 
+tbody {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    gap: 7px;
+}
+
 label {
     font-weight: 500;
 }
