@@ -22,22 +22,11 @@ isset($_POST['cargo'])
     $nome = $_POST['nome'];
     $salarioAntigo = $_POST['salario-antigo'];
     $genero = $_POST['genero-sexual'];
-    $cargo = $_POST['cargo'];
+    $cargo = strtolower($_POST['cargo']);
 
-    if ($salarioAntigo > 5000) {
-        $salarioNovo = ($salarioAntigo / 100 * 10) + $salarioAntigo;
+    $salarioNovo = $salarioAntigo > 5000 ? $salarioAntigo * 1.1 : $salarioAntigo * 1.2;
 
-    } else {
-        $salarioNovo = number_format(($salarioAntigo / 100 * 20) + $salarioAntigo, 2, ',', '.');
-    }
-
-    if($genero == 'masculino') {
-        $theGenero = 'O';
-    } elseif ($genero == 'feminino') {
-        $theGenero = 'A';
-    } else {
-        $theGenero = 'I';
-    }
+    $theGenero = $genero === 'masculino' ? 'O' : ($genero === 'feminino' ? 'A' : '');
 
     $mensagem = "$theGenero $nome passará a receber R$<span class=\"novoSalario\">$salarioNovo</span>, no cargo de $cargo.";
 
